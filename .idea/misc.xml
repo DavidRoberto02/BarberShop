@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/corner_radius.xml" value="0.181" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_inicio.xml" value="0.33229166666666665" />
       </map>
     </option>
   </component>

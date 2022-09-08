@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Barber shop</string>
     <string name="text_title_home">Explorar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_image_description">imagen de corte de mujer</string>
 </resources>
