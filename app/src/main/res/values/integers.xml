@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="contador_max_caracteres">100</integer>
+    <integer name="contador_max_caracteres_d">400</integer>
+
+</resources>

@@ -4,8 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/corner_radius.xml" value="0.181" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_corte.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/layout/fragment_hombre.xml" value="0.33229166666666665" />
         <entry key="app/src/main/res/layout/fragment_inicio.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/menu/mobile_navigation.xml" value="0.33229166666666665" />
       </map>
     </option>
   </component>

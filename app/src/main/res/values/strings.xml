@@ -1,7 +1,32 @@
 <resources>
     <string name="app_name">Barber shop</string>
-    <string name="text_title_home">Explorar</string>
+    <string name="text_title_home">Sube tus cortes o productos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_image_description">imagen de corte de mujer</string>
+    <string name="counter_max_caracteres">100</string>
+    <string name="counter_max_caracteres_d">400</string>
+    <string name="button_image_description">Boton para subir la imagen</string>
+    <string name="description_image">Imagen del corte</string>
+    <string name="text_btn_submit">Subir Ahora</string>
+    <string name="text_description_et">Descripcion:</string>
+    <string name="text_name_corte_et">Nombre del corte:</string>
+    <string name="required_campos">Llene todos los datos.</string>
+    <string name="post_publicado">Post publicado</string>
+    <string name="post_message_title">Sube tus cortes o productos de tu negocio</string>
+    <string name="instantanea_fallida">Hubo un error, intenta de nuevo.</string>
+    <string name="welcome_login_success">Bienvenido</string>
+    <string name="text_title_fragment">Subir</string>
+    <string name="text_title_submit">Subir</string>
+
+
+    //Array Strings
+    <string-array name="Categoria">
+
+        <item>Seleccione la categoria</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Productos</item>
+
+    </string-array>
 </resources>

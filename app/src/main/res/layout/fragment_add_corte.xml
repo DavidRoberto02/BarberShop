@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/common_padding_min"
+    tools:context=".ui.AddCorteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/text_title_home"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombreCorte"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_max"
+            app:counterEnabled="true"
+            app:counterMaxLength="@integer/contador_max_caracteres"
+            app:endIconMode="clear_text"
+            app:helperText="@string/counter_max_caracteres"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:startIconDrawable="@drawable/ic_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreCorte"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/text_name_corte_et"
+                android:inputType="text"
+                android:maxLines="@integer/contador_max_caracteres" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescripcionCorte"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:counterEnabled="true"
+            app:counterMaxLength="@integer/contador_max_caracteres_d"
+            app:endIconMode="clear_text"
+            app:helperText="@string/counter_max_caracteres_d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNombreCorte"
+            app:startIconDrawable="@drawable/ic_description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescripcionCorte"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/text_description_et"
+                android:inputType="text"
+                android:maxLines="@integer/contador_max_caracteres" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:contentDescription="@string/description_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="H, 4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilDescripcionCorte" />
+
+        <ImageButton
+            android:id="@+id/btnSelect"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/button_image_description"
+            android:src="@drawable/ic_image_search"
+            app:layout_constraintBottom_toBottomOf="@id/imgPhoto"
+            app:layout_constraintEnd_toEndOf="@+id/imgPhoto"
+            app:layout_constraintStart_toStartOf="@+id/imgPhoto"
+            app:layout_constraintTop_toTopOf="@id/imgPhoto" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:entries="@array/Categoria"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSelect" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/text_btn_submit"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCategory" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
