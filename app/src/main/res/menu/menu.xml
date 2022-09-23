@@ -3,6 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/navigation_men"
+        android:icon="@drawable/ic_man"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_women"
+        android:icon="@drawable/ic_women"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_products"
+        android:icon="@drawable/ic_beauty"
+        android:title="@string/title_productos" />
+
+    <item
         android:id="@+id/action_add"
         android:title="@string/text_title_submit"
         app:showAsAction="never"

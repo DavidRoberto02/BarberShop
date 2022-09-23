@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Barber shop</string>
+    <string name="text_title_home">Upload your cuts or products</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_image_description">image of a womans haircut</string>
+    <string name="counter_max_caracteres">100</string>
+    <string name="counter_max_caracteres_d">400</string>
+    <string name="button_image_description">Button to upload the image</string>
+    <string name="description_image">Image of the cut</string>
+    <string name="text_btn_submit">Upload Now</string>
+    <string name="text_description_et">Description:</string>
+    <string name="text_name_corte_et">Name of the cut:</string>
+    <string name="required_campos">Fill in all the information.</string>
+    <string name="post_publicado">Cutting published.</string>
+    <string name="post_message_title">Upload your cuts or products of your business</string>
+    <string name="instantanea_fallida">There was an error, try again.</string>
+    <string name="welcome_login_success">Welcome</string>
+    <string name="text_title_fragment">Upload</string>
+    <string name="text_title_submit">Upload</string>
+    <string name="title_home">Man</string>
+    <string name="title_dashboard">Women</string>
+    <string name="title_productos">Products</string>
+    <string name="text_name_corte">Name of the cut</string>
+    <string name="text_image_Corte">Image of the cut</string>
+    <string name="text_name_description">description</string>
+    <string name="text_description_delete">Delete post</string>
+    <string name="dialog_delete_snapshot">Do you want to remove the cut?</string>
+    <string name="dialog_delete_confirm">Delete</string>
+    <string name="dialog_delete_cancel">Cancel</string>
+
+
+    //Array Strings
+    <string-array name="Categoria">
+
+        <item>Select category</item>
+        <item>Man</item>
+        <item>Women</item>
+        <item>Products</item>
+
+    </string-array>
+
+
+
+</resources>

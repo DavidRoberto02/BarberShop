@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.barbershop.R
 import com.example.barbershop.databinding.ActivityMainBinding
+import com.example.barbershop.ui.addModule.AddCorteFragment
+import com.example.barbershop.ui.entities.HomeAux
+import com.example.barbershop.ui.hombreModule.HombreFragment
+import com.example.barbershop.ui.mujerModule.MujerFragment
+import com.example.barbershop.ui.productsModule.ProductsFragment
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.snackbar.Snackbar
@@ -50,20 +55,58 @@ class MainActivity : AppCompatActivity() {
     private fun setupBottomNav() {
         mFragmentManager = supportFragmentManager
 
+        val menFragment = HombreFragment()
+        val womenFragment = MujerFragment()
+        val productsFragment = ProductsFragment()
         val corteFragment = AddCorteFragment()
 
-        mActiveFragment = corteFragment
+        mActiveFragment = menFragment
         mFragmentManager.beginTransaction()
             .add(R.id.hostFragment, corteFragment, AddCorteFragment::class.java.name)
             .hide(corteFragment)
             .commit()
+        mFragmentManager.beginTransaction()
+            .add(R.id.hostFragment, productsFragment, ProductsFragment::class.java.name)
+            .hide(productsFragment)
+            .commit()
+        mFragmentManager.beginTransaction()
+            .add(R.id.hostFragment, womenFragment, MujerFragment::class.java.name)
+            .hide(womenFragment)
+            .commit()
+        mFragmentManager.beginTransaction()
+            .add(R.id.hostFragment, menFragment, HombreFragment::class.java.name)
+            .hide(menFragment)
+            .commit()
 
-        binding.bottomNav.setOnItemReselectedListener {
+        binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
+                R.id.navigation_men -> {
+                    mFragmentManager.beginTransaction().hide(mActiveFragment).show(menFragment)
+                        .commit()
+                    mActiveFragment = menFragment
+                    (menFragment as HomeAux).goToTop()
+                    true
+                }
+                R.id.navigation_women -> {
+                    mFragmentManager.beginTransaction().hide(mActiveFragment).show(womenFragment)
+                        .commit()
+                    mActiveFragment = womenFragment
+                    (menFragment as HomeAux).goToTop()
+                    true
+                }
+                R.id.navigation_products -> {
+                    mFragmentManager.beginTransaction().hide(mActiveFragment).show(productsFragment)
+                        .commit()
+                    mActiveFragment = productsFragment
+                    (menFragment as HomeAux).goToTop()
+                    true
+                }
                 R.id.action_add -> {
                     mFragmentManager.beginTransaction().hide(mActiveFragment).show(corteFragment)
                         .commit()
                     mActiveFragment = corteFragment
+                    (menFragment as HomeAux).goToTop()
+                    true
                 }
                 else -> false
             }

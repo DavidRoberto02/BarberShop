@@ -18,6 +18,16 @@
     <string name="welcome_login_success">Bienvenido</string>
     <string name="text_title_fragment">Subir</string>
     <string name="text_title_submit">Subir</string>
+    <string name="title_home">Hombre</string>
+    <string name="title_dashboard">Mujer</string>
+    <string name="title_productos">Productos</string>
+    <string name="text_name_corte">Nombre del corte</string>
+    <string name="text_image_Corte">imagen del corte</string>
+    <string name="text_name_description">descripcion</string>
+    <string name="text_description_delete">Eliminar post</string>
+    <string name="dialog_delete_snapshot">Desea eliminar el corte?</string>
+    <string name="dialog_delete_confirm">Eliminar</string>
+    <string name="dialog_delete_cancel">Cancelar</string>
 
 
     //Array Strings

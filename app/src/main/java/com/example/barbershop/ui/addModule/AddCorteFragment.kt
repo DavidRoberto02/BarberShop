@@ -1,4 +1,4 @@
-package com.example.barbershop.ui
+package com.example.barbershop.ui.addModule
 
 import android.app.Activity
 import android.content.Intent
@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.barbershop.R
 import com.example.barbershop.databinding.FragmentAddCorteBinding
+import com.example.barbershop.ui.entities.User
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -126,12 +127,9 @@ class AddCorteFragment : Fragment() {
     }
 
     private fun saveCorte(key: String?, url: String, sexo: String, description: String, name: String) {
-        val corteEntity = Corte( photoUrl = url, Sexo = sexo, descripcion = description, nombre = name)
+        val corteEntity = User( photoUrl = url, Sexo = sexo, descripcion = description, nombre = name)
         mDatabaseReference.child(key!!).setValue(corteEntity)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
 
 }
